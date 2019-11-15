@@ -1,6 +1,6 @@
 FROM python:3.6-alpine as builder
 
-RUN apk --no-cache add g++ zeromq-dev
+RUN apk --no-cache add g++ zeromq-dev && pip install beautifulsoup4
 COPY . /src
 WORKDIR /src
 RUN pip install .
